@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navlinks {
+    display: flex;
+    list-style-type: none;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    margin: 1rem;
+}
