@@ -13,7 +13,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3.2rem;
+  font-size: 3rem;
   width: 50%;
 }
 
@@ -30,11 +30,28 @@
   justify-content: center;
 }
 
-.connectButton {
+.hint {
   all: unset;
   cursor: pointer;
   color: var(--primary-text-color);
+  text-align: center;
+  margin: 1rem;
 }
+
+.button {
+  all: unset;
+  text-align: center;
+  background: url(../public/mesh-gradient-pink.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1.3em;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5em;
+  min-width: 4.375rem;
+  min-height: 1rem;
+}
+
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
