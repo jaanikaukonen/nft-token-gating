@@ -1,10 +1,39 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 6rem;
-  min-height: 100vh;
+  height: 90vh;
+}
+
+.title {
+  background-image: url(../public/mesh-gradient-pink.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.2rem;
+  width: 50%;
+}
+
+.card {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--dark-background);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0.6250em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.connectButton {
+  all: unset;
+  cursor: pointer;
+  color: var(--primary-text-color);
 }
 
 /* Enable hover only on non-touch devices */

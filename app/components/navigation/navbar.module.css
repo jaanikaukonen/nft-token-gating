@@ -28,10 +28,12 @@
 .linkText {
     text-decoration: none;
     color: var(--primary-text-color);
+    font-weight: 400;
 }
 
 .linkActive {
     color: var(--secondary-text-color);
+    font-weight: 600;
 }
 
 .active {
