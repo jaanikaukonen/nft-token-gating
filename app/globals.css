@@ -22,6 +22,5 @@ body {
 }
 
 body {
-  /* background: url(../public/mesh-gradient-black.png) */
   background-color: var(--light-background);
 }
