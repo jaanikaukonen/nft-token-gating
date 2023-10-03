@@ -6,19 +6,10 @@ import metamaskIcon from "../public/metamask.svg"
 import { useState } from "react"
 import Link from "next/link"
 import { ethers } from "ethers"
+import { useAccountContext } from "./context/account"
 
 export default function Home() {
-    const [accounts, setAccounts] = useState([])
-    const isConnected = Boolean(accounts[0])
-  
-    const connectWallet = async () => {
-        if (window.ethereum) {
-            const accounts = await window.ethereum.request({
-                method: "eth_requestAccounts",
-            })
-            setAccounts(accounts)
-        }
-    }
+    const { accounts, connectWallet, isConnected } = useAccountContext()
 
     const mint = () => {
         console.log("Minting...")

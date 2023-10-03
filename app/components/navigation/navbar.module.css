@@ -40,3 +40,28 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.wallet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.walletIcon {
+    width: 2em;
+    height: 2em;
+    margin: 0.5em;
+}
+
+.connectButton {
+    all: unset;
+    text-align: center;
+    cursor: pointer;
+    color: var(--primary-text-color);
+    font-size: small;
+}
+
+.walletAddress {
+    color: var(--primary-text-color);
+    font-size: small;
+}
