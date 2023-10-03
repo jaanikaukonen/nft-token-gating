@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, Dispatch, SetStateAction } from "react"
+import { createContext, useContext, useState } from "react"
 
 interface ContextProps {
   accounts: string[],
@@ -15,8 +15,8 @@ const AccountData = createContext<ContextProps>({
 })
 
 export const AccountContext = ({ children }: { children: React.ReactNode }) => {
-    const [accounts, setAccounts] = useState(useState<[] | string[]>([]))
-    const isConnected = accounts[0].length
+    const [accounts, setAccounts] = useState<string[]>([])
+    const isConnected = accounts.length !== 0
 
     const connectWallet = async () => {
         if (window.ethereum) {
