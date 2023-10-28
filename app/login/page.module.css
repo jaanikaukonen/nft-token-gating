@@ -19,6 +19,31 @@
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.textContainer {
+  width: 50%;
+}
+
+.title {
+  color: var(--primary-text-color);
+  text-align: center;
+  margin: 1rem;
+}
+
+.message {
+  color: var(--primary-text-color);
+  text-align: left;
+}
+
+.link {
+  color: var(--light-link-color);
+}
+
 .noAccess {
   background-image: url(../../public/mesh-gradient-pink.png);
   background-size: cover;

@@ -7,12 +7,33 @@ import { useState } from "react"
 import Link from "next/link"
 import { ethers } from "ethers"
 import { useAccountContext } from "./context/account"
+import accessToken from "./AccessToken.json"
+
+const accessTokenAddress = "0x4b740e957C1a0021c44f097Af12D2e12803ffF74"
 
 export default function Home() {
     const { accounts, connectWallet, isConnected } = useAccountContext()
+    const [userInfo, setUserInfo] = useState<string | null>(null)
 
-    const mint = () => {
-        console.log("Minting...")
+    const mint = async () => {
+        if (isConnected) {
+            const provider = new ethers.BrowserProvider(window.ethereum)
+            const signer = await provider.getSigner()
+            const contract = new ethers.Contract(
+                accessTokenAddress,
+                accessToken.abi,
+                signer
+            )
+
+            try {
+                const response = await contract.mint()
+                console.log("response: ", response)
+                setUserInfo("Minting in process, it may take a while depending on the network traffic. Check details in your wallet or try to login")
+            } catch (e) {
+                console.log("error: ", e)
+                setUserInfo("You have already claimed the NFT")
+            }
+        }        
     }
 
     return (
@@ -27,8 +48,16 @@ export default function Home() {
                 
                 {isConnected ? (
                     <>
-                        <h1 className={styles.hint}>MetaMask wallet connected! Click “Mint” to collect your NFT.</h1>
-                        <button className={styles.button} onClick={mint}>Mint</button>
+                        {userInfo ? (
+                            <>
+                                <h1 className={styles.hint}>{userInfo}</h1>
+                            </>
+                        ) : (
+                            <>
+                                <h1 className={styles.hint}>MetaMask wallet connected! Click “Mint” to collect your NFT.</h1>
+                                <button className={styles.button} onClick={mint}>Mint</button>
+                            </>
+                        )}
                     </>
                 ) : (
                     <>

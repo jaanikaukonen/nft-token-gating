@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from "react"
 interface ContextProps {
   accounts: string[],
   connectWallet: (() => Promise<void>) | undefined,
-  isConnected: Boolean
+  isConnected: Boolean,
 }
 
 const AccountData = createContext<ContextProps>({
