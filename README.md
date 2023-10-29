@@ -33,7 +33,7 @@ npx hardhat clean
 ```
 npx hardhar compile
 ```
-#### Run the `deploy.ts` script
+#### Run the deployment script
 Replace goerli with whatever network you're using.
 ```
 npx hardhat run scripts/deploy.mjs --network goerli
