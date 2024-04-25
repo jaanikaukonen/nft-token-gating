@@ -9,7 +9,7 @@ import { ethers } from "ethers"
 import { useAccountContext } from "./context/account"
 import accessToken from "./AccessToken.json"
 
-const accessTokenAddress = "0x4b740e957C1a0021c44f097Af12D2e12803ffF74"
+const accessTokenAddress = "0x3Fa7E70f38e24F725eC977fFE3362c32d91E5D20"
 
 export default function Home() {
     const { accounts, connectWallet, isConnected } = useAccountContext()

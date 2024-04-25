@@ -10,7 +10,7 @@ dotenv.config()
 module.exports = {
     solidity: "0.8.20",
     networks: {
-        goerli: {
+        sepolia: {
             url: process.env.REACT_APP_ALCHEMY_URL,
             accounts: [process.env.REACT_APP_PRIVATE_KEY]
         },

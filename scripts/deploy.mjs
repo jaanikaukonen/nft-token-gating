@@ -6,7 +6,9 @@ async function main() {
 
     await accessToken.waitForDeployment()
 
-    console.log("AccessToken deployed to: ", accessToken.getAddress())
+    const address = await accessToken.getAddress()
+
+    console.log("AccessToken deployed to: ", address)
 }
 
 main().catch((error) => {

@@ -23,7 +23,7 @@ Create `.env` file and copy the content from `.env.example` to it. Replace the v
 #### Deploy the smart contract.
 DEPLOY THIS CONTRACT ONLY INTO A TEST NETWORK, DEPLOYING TO MAIN NETWORK WILL CAUSE REAL MONEY.
 
-If you are using some other test network than goerli, update the `networks` in `hardhat.config.js`.
+If you are using some other test network than sepolia, update the `networks` in `hardhat.config.js`.
 
 #### Clear the cache and delete all artifacts.
 ```
@@ -34,12 +34,12 @@ npx hardhat clean
 npx hardhat compile
 ```
 #### Run the deployment script
-Replace goerli with whatever network you're using.
+Replace sepolia with whatever network you're using.
 ```
-npx hardhat run scripts/deploy.mjs --network goerli
+npx hardhat run scripts/deploy.mjs --network sepolia
 ```
 
-Navigate to `https://goerli.etherscan.io/address/<paste your contract address here>` to see you contract and its transactions.
+Navigate to `https://sepolia.etherscan.io/address/<paste your contract address here>` to see you contract and its transactions.
 
 #### Verify the smart contract
 You should see the contract address in your console, if not, run the application with `npm run dev`, connect your wallet, mint an NFT and and you should see the transaction in your wallets history and should be able to find the contract address. You can also skip this step but then your contract will be visible only in bytecode.

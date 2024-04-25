@@ -8,7 +8,7 @@ import { ethers } from "ethers"
 import accessToken from "../AccessToken.json"
 import ethereum from "../../public/ethereum.svg"
 
-const accessTokenAddress = "0x4b740e957C1a0021c44f097Af12D2e12803ffF74"
+const accessTokenAddress = "0x3Fa7E70f38e24F725eC977fFE3362c32d91E5D20"
 
 export default function Login() {
     const { accounts, isConnected } = useAccountContext()
@@ -51,7 +51,7 @@ export default function Login() {
                         
                         <div className={styles.textContainer}>
                             <h2 className={styles.title}>Congratulations!</h2>
-                            <p className={styles.message}>You are now the owner of an NFT created on Ethereum&apos;s Goerli testnet and have exclusive access to a token-gated Web3 app. Pretty cool, isn&apos;t it?<br></br><br></br>You can check out <a className={styles.link} href="https://goerli.etherscan.io/">https://goerli.etherscan.io/</a> to view NFT transactions and details about the smart contract you&apos;ve interacted with.</p>
+                            <p className={styles.message}>You are now the owner of an NFT created on Ethereum&apos;s Sepolia testnet and have exclusive access to a token-gated Web3 app. Pretty cool, isn&apos;t it?<br></br><br></br>You can check out <a className={styles.link} href="https://sepolia.etherscan.io/">https://sepolia.etherscan.io/</a> to view NFT transactions and details about the smart contract you&apos;ve interacted with.</p>
                         </div>
                     </div>
                 ) : (
