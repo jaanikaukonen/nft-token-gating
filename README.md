@@ -31,7 +31,7 @@ npx hardhat clean
 ```
 #### Compile the entire project and build all artifacts
 ```
-npx hardhar compile
+npx hardhat compile
 ```
 #### Run the deployment script
 Replace goerli with whatever network you're using.

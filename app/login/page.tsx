@@ -20,7 +20,6 @@ export default function Login() {
         }
 
         const walletHasAccess = async () => {
-            console.log(hasAccess)
             const provider = new ethers.BrowserProvider(window.ethereum)
             const signer = await provider.getSigner()
             const contract = new ethers.Contract(
@@ -35,7 +34,6 @@ export default function Login() {
             } catch (e) {
                 console.log("error: ", e)
             }
-            console.log(hasAccess)
         }
 
         walletHasAccess()
